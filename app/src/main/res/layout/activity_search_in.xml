@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.filter.SearchInActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/museo_sans_cyrl_700_italic"
+                android:letterSpacing="-0.05"
+                android:text="@string/logo"
+                android:textColor="@color/secondary"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_back"
+                    android:contentDescription="@string/back" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="4dp"
+                android:textColor="@color/secondary"
+                android:text="@string/clear"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/open_sans_bold"
+                android:background="?attr/selectableItemBackground"
+                android:drawableEnd="@drawable/ic_clear"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="@color/saco_black"
+        android:textSize="16sp"
+        android:text="@string/search_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/tv_title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/saco_black"
+        android:textSize="14sp"
+        android:text="@string/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_desc_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/saco_black"
+        android:textSize="14sp"
+        android:text="@string/desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_label" />
+
+    <TextView
+        android:id="@+id/tv_content_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/saco_black"
+        android:textSize="14sp"
+        android:text="@string/content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc_label" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/title_switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:thumb="@drawable/switch_thumb"
+        app:track="@drawable/switch_track"
+        tools:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_label" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/desc_switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:thumb="@drawable/switch_thumb"
+        app:track="@drawable/switch_track"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_desc_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_desc_label" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/content_switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:thumb="@drawable/switch_thumb"
+        app:track="@drawable/switch_track"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_content_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_content_label" />
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/white"
+        android:text="@string/apply"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content_label"
+        app:layout_constraintVertical_bias="0.951" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

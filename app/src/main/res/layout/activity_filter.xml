@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.filter.FilterActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/museo_sans_cyrl_700_italic"
+                android:letterSpacing="-0.05"
+                android:text="@string/logo"
+                android:textColor="@color/secondary"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_back"
+                    android:contentDescription="@string/back" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="4dp"
+                android:textColor="@color/secondary"
+                android:text="@string/clear"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/open_sans_bold"
+                android:background="?android:selectableItemBackground"
+                android:drawableEnd="@drawable/ic_clear"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="@color/saco_black"
+        android:textSize="16sp"
+        android:text="@string/filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/saco_black"
+        android:textSize="14sp"
+        android:text="@string/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/from"
+        android:textColor="@color/secondary"
+        android:textSize="11sp"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintStart_toStartOf="@+id/tv_date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_date_from"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/yyyy_mm_dd"
+        android:textSize="14sp"
+        android:fontFamily="@font/open_sans_regular"
+        android:drawableEnd="@drawable/ic_date"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_from" />
+
+    <TextView
+        android:id="@+id/tv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/to"
+        android:textColor="@color/secondary"
+        android:textSize="11sp"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintStart_toStartOf="@+id/et_date_from"
+        app:layout_constraintTop_toBottomOf="@+id/et_date_from" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_date_to"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/yyyy_mm_dd"
+        android:textSize="14sp"
+        android:fontFamily="@font/open_sans_regular"
+        android:drawableEnd="@drawable/ic_date"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_to" />
+
+    <TextView
+        android:id="@+id/tv_search_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/saco_black"
+        android:textSize="14sp"
+        android:text="@string/search_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_date_to" />
+
+    <TextView
+        android:id="@+id/tv_search_in_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/saco_dark_grey"
+        android:textSize="14sp"
+        tools:text="All"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_date_to" />
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/white"
+        android:text="@string/apply_filter"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_search_in"
+        app:layout_constraintVertical_bias="0.951" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

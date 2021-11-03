@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_news">News</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_more">More</string>
+    <string name="logo">Logo</string>
+    <string name="back">Back</string>
+    <string name="message_something_went_wrong">Something went wrong</string>
+    <string name="search_history">Search History</string>
+    <string name="search_progress">Searching…</string>
+    <string name="news_count">News %d</string>
+    <string name="clear">Clear</string>
+    <string name="filter">Filter</string>
+    <string name="date">Date</string>
+    <string name="from">From</string>
+    <string name="yyyy_mm_dd">yyyy/mm/dd</string>
+    <string name="to">To</string>
+    <string name="search_in">Search In</string>
+    <string name="none">None</string>
+    <string name="all">All</string>
+    <string name="title">Title</string>
+    <string name="desc">Description</string>
+    <string name="content">Content</string>
+    <string name="apply_filter">Apply filter</string>
+    <string name="too_long">Too long</string>
+    <string name="incorrect_date">Incorrect date</string>
+    <string name="apply">Apply</string>
+    <string name="sort_by">Sort By</string>
+    <string name="upload_date">Upload date</string>
+    <string name="relevance">Relevance</string>
+</resources>
